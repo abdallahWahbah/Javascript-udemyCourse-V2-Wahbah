@@ -36,7 +36,7 @@
 // // every function hase a property called prototype including the constructor function
 // Person.prototype.calcAge = function()
 // {
-//     console.log(2037 - this.birthYear);
+//     console.log(2024 - this.birthYear);
 // }
 // Person.prototype.species = "hello from the other side"
 
@@ -47,7 +47,7 @@
 // console.log(abdo.species, wahbah.species);
 // // console.log(Person.prototype.isPrototypeOf(abdo)); // true
 // console.log(abdo.hasOwnProperty("firstName")); // true
-// console.log(abdo.hasOwnProperty("species")); // false
+// console.log(abdo.hasOwnProperty("species")); // false cause it is not in the Constructor function, it has access to it because of prototype 
 
 
 

@@ -55,7 +55,7 @@
 
 
 ////////////////////////////// 6 //////////////////////////////
-// functions accepting callback functions
+// functions accepting callback functions (Higher-order functions)
  
 // const oneWord = (str) =>
 // {
@@ -240,7 +240,7 @@
 //         console.log(x+y);
 //     }
 // )(1, 2);
-// (()=> console.log("niver ever be run again"))();
+// (()=> console.log("never ever run again"))();
 
 
 
@@ -254,25 +254,25 @@
 
 // A closure makes sure that a function doesn't lose connection to variables that existed at the function's birth place
 
-// more onvious definition
+// more obvious definition
 
 // A closure is like a backpack that a function carries around wherever it goes. This backpack has all the variables
 // that were present in the environment where the function was created
 
-// const secureBooking = function()
-// {
-//     let passengerCount = 0;
-//     return function() 
-//     {
-//         passengerCount++;
-//         console.log(`${passengerCount} passengers`);
-//     }
-// }
-// const booker = secureBooking();
-// booker();
-// booker();
-// booker();
-// booker();
+const secureBooking = function()
+{
+    let passengerCount = 0;
+    return function() 
+    {
+        passengerCount++;
+        console.log(`${passengerCount} passengers`);
+    }
+}
+const booker = secureBooking();
+booker(); // 1 passengers
+booker(); // 2 passengers
+booker(); // 3 passengers
+booker(); // 4 passengers
 
 
 
@@ -287,7 +287,7 @@ let f;
 const g =function()
 {
     const a = 23;
-    f = function()
+    f = function() // reassign
     {
         console.log(a*2);
     }
@@ -300,7 +300,7 @@ const h = function()
         console.log(b * 2);
     }
 }
-g();
+g(); // after execution the g(), f will be a function 
 f();
 
 // Re-assigning f function
@@ -324,6 +324,7 @@ boardPassengers(1800, 3);
 
 // even if you declared a global variable (perGroup) with the same in inside, it won't be considered
 // cause the closure has more priority than the scope chain
+const perGroup = 9;
 boardPassengers(1800, 5);
 
 

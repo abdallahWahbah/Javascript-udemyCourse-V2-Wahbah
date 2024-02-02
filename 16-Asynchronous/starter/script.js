@@ -534,7 +534,7 @@ GOOD LUCK 😀
 
 
 /////////////////////////////////////// 21 ///////////////////////////////////////
-// Promise.all(): Running promises in paralled
+// Promise.all(): Running promises in parallel
 
 // const getJSON = (url, msgError = "Something went wrong") =>
 // {

@@ -19,6 +19,10 @@
 
 ////////////////////////////// 12 //////////////////////////////
 
+// const firstName = "Abdallah";
+// const lastName = "Wahbah";
+// console.log(`My name is: ${firstName} ${lastName}`);
+
 // console.log(`hello \nfrom \nthe \nother \nside`)
 // console.log(`hello 
 // from 
@@ -72,9 +76,14 @@
 
 // // only the "+" sign converts the number to string (concatination) (of course i am talking about when the number is in "")
 
+// "+" converts numbers to strings
+// "-", "*", "/", "logical operators" converted the strings to numbers (opposite conversion)
+
 // console.log('Iam ' + 23 +" years old"); // result is : "Iam 23 years old"
 
-// console.log('23' - '13' + 5); // result is 15 as a number
+// console.log('23' - '13' + 5); // result is 15 as a number 
+
+
 // console.log('23' + '11' +'1'); // result is '23111'
 // console.log('23' + '11' - 1); // result is '2311' - 1 = 2310
 // console.log('12' * '2') // result is 24 
@@ -96,6 +105,13 @@
 
 // 5 falsy values: 0, '', undefiened, null, NaN
 
+
+// console.log(Boolean(0)); // false
+// console.log(Boolean('')); // false
+// console.log(Boolean(undefined)); // false
+// console.log(Boolean(null)); // false
+// console.log(Boolean(NaN)); // false
+
 // let x;
 // if(x)
 // {
@@ -105,6 +121,10 @@
 // {
 //     console.log("x is undefined");
 // }
+
+// let money = 10;
+// if(money) console.log("there is money");
+// else console.log("money is not defined")
 
 
 
@@ -135,7 +155,7 @@
 
 
 ////////////////////////////// 19 //////////////////////////////
-// AND OR NOT
+// Logical Operators: AND OR NOT
 
 // let x = true;
 // let y = false;
@@ -171,8 +191,19 @@
 //         console.log("Monday");
 //         breadk;
 //     default:
-//         console.log("Friday");
+//         console.log("Error: Not matched");
 // }
+
+
+
+
+
+
+
+////////////////////////////// 22 //////////////////////////////
+// Statements vs Expression 
+// expression is a piece of code that produces a value >>> examples:  (2 + 3), (true && false && !false), (1998) 
+// whenever a line ends with a ; it's a statement 
 
 
 
@@ -184,11 +215,3 @@
 
 // let hate = 'spiderman';
 // console.log(`I don't like ${hate === 'spiderman' ? hate : 'batman'}`);
-
-
-
-
-
-
-////////////////////////////// 25 //////////////////////////////
-// Switch

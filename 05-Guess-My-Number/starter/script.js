@@ -5,7 +5,7 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 
-// for testing
+// for testing 
 document.querySelector(".number").textContent = secretNumber;
 
 let displayMessage =(message) =>

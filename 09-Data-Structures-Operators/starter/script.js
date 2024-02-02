@@ -68,7 +68,7 @@ const restaurant = {
 // // const [first, , third]= restaurant.categories;
 // console.log(first, second)
 
-// // if we wanted to invert 2 variable
+// // if we wanted to swap 2 variable
 // let [main, secondary] = restaurant.categories;
 // console.log(main, secondary);
 // [secondary, main] = [main, secondary];
@@ -82,7 +82,7 @@ const restaurant = {
 // // a = b;
 // // b = temp;
 
-// // receive 2 return values from a funciton
+// // receive 2 return values from a function
 // const [starter, final] = restaurant.order(2, 0);
 // console.log(starter,final);
 
@@ -204,12 +204,12 @@ const restaurant = {
 // Spread operator: to unpack an array while rest to pack elements to an array
 
 
-// 1) Destructuring
+// // 1) Destructuring
 
-// spreat becomes on RHS of "="
+// // // spread becomes on RHS of "="
 // const arr = [1, 2, ...[3, 4]];
 
-// // Rest becoms on LHS of "="
+// // // Rest becoms on LHS of "="
 // const [a, b, ...others] = [5, 6, 7, 8, 9, 0];
 // console.log(a, b, others);
 
@@ -260,15 +260,16 @@ const restaurant = {
 
 
 ////////////////////////////// 7 //////////////////////////////
-// Short circuiting: 
+// Short circuiting: (&& and ||)
 
 // console.log('---- OR ----');
+// بيدور علي التروثي فاليو ولو ملاقاش تروثي فاليو هيرجع اخر قيمة
 // // if the first value is a truthy value, it will return the first value (2 different data types)
 
 // console.log(3 || "abdo");  // returns 3
 // console.log('' || 'abdo'); // first value is falsy one : return abdo
 // console.log(true || 0); // true: different data types
-// console.log(undefined || null); // first value is falsy > print the other one
+// console.log(undefined || null); // first value is falsy >>> print the other one
 // console.log(undefined || 0 || '' || "hello" || 23) // print hello
 
 // const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
@@ -280,7 +281,8 @@ const restaurant = {
 
 // console.log('---- AND ----');
 // // And operator short circuits
-// // when the first value is falsy it will return that falsy value without evaluating the secong operand
+// بيدور علي الفولسي فاليو .. ولو مفيش فولسي فاليو هيجيب اخر فيمة
+// // when the first value is falsy it will return that falsy value without evaluating the second operand
 // // if the first value is truthy, it will continue until it founds a falsy one. if it doesn't find falsy, it will return the last value
 // console.log(0 && 'abdo'); // 0
 // console.log(7 && 'abdo') // abdo
@@ -312,6 +314,7 @@ const restaurant = {
 
 ////////////////////////////// 8 //////////////////////////////
 // Nullish Coalscing Operator "??"
+// nullish operator works with nullish values (undefined and null) not falsy values(undefined and null, 0, "", false)
 
 // restaurant.numGuests = 0;
 // let guest = restaurant.numGuests || 10; // it returns 10 but we want to return 0 
@@ -470,7 +473,7 @@ GOOD LUCK 😀
 
 
 ////////////////////////////// 12 //////////////////////////////
-// Optional Chaning
+// Optional Chaining
 
 // if(restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
 
@@ -478,7 +481,7 @@ GOOD LUCK 😀
 // console.log(restaurant.openingHours.mon?.open); // if "monday" property exists, find "open" property inside it, else it will return undefiened
 // console.log(restaurant.openingHours?.mon?.open);
 // // Methods
-// console.log(restaurant.orderHello?.(1, 4) ?? "method doesn't exist"); // remember "??" is nullish coalscing >> video #8 .... finds truthy value
+// console.log(restaurant.orderHello?.(1, 4) ?? "method doesn't exist"); // remember "??" is nullish coalscing >> video #8 .... finds truthy value with nullish values(undefined and null)
 
 // // Arrays
 // const user = [{name: 'abdo', email: "abdo@yahoo.com"}];
@@ -490,7 +493,7 @@ GOOD LUCK 😀
 
 
 ////////////////////////////// 13 //////////////////////////////
-// looping through object keys, values and entries(name+value) >> i skipped entries
+// looping through object keys, values and entries(name + value)
 
 // Property Names
 // const properties = Object.keys(openingHours);
@@ -504,6 +507,111 @@ GOOD LUCK 😀
 // const values = Object.values(openingHours);
 // console.log(values);
 
+// // Entries
+// for(const [key, {open, close}] of Object.entries(openingHours))
+// {
+//   console.log(`On ${key}, we open at ${open} and close at ${close}`)
+// }
+
+
+
+
+
+
+////////////////////////////// 14 //////////////////////////////
+// Coding Challenge #2
+
+/* 
+Let's continue with our football betting app!
+
+1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
+3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+  Odd of victory Bayern Munich: 1.33
+  Odd of draw: 3.25
+  Odd of victory Borrussia Dortmund: 6.5
+Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
+
+BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+  {
+    Gnarby: 1,
+    Hummels: 1,
+    Lewandowski: 2
+  }
+
+GOOD LUCK 😀
+*/
+
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// // 1)
+// for(const [index, player] of game.scored.entries())
+// {
+//   console.log(`Goal ${index + 1}: ${player}`)
+// }
+
+// // 2)
+// let average = 0;
+// for(const value of Object.values(game.odds))
+// {
+//     average += value;
+// }
+// average = average / Object.keys(game.odds).length;
+// console.log(average);
+
+// // 3)
+// for (const [key, value] of Object.entries(game.odds)) {
+//   const teamStr = key === 'x' ? 'draw' : `victory ${game[key]}`;
+//   console.log(`Odd of ${teamStr} ${value}`);
+// }
+
+// Bonus)
+// let playersScored = {};
+// for(const player of game.scored)
+// {
+//   playersScored[player] ? playersScored[player]++ : (playersScored[player] = 1);
+// }
+// console.log(playersScored)
+
 
 
 
@@ -511,6 +619,7 @@ GOOD LUCK 😀
 
 ////////////////////////////// 15 //////////////////////////////
 // Sets
+// receives array and returns that array with no repitition
 // returns object of non repeating values
 // The main purpose of sets is to remove duplicates
 // const ordersSet = new Set(['pizza', 'pasta', 'Risotto', 'pizza', 'pasta']); // all duplicates will be gone
@@ -702,7 +811,7 @@ GOOD LUCK 😀
 // console.log(airline.indexOf('portugal'));
 
 // console.log(airline.slice(4)); // start slicing at index = 4 (result: air portugal)
-// console.log(airline.slice(4, 7)); // start index, final index (result:air)
+// console.log(airline.slice(4, 7)); // start index, final index(excluding) (result:air)
 
 // // get the first word
 // console.log(airline.slice(0, airline.indexOf(' ')));
@@ -741,10 +850,10 @@ GOOD LUCK 😀
 // toLowerCase, toUpperCase, replace, trim, includes, startsWith, endsWith
 
 // const airline ='Tap air portugal';
-// console.log(airline.toLowerCase());
-// console.log(airline.toUpperCase());
+// console.log(airline.toLowerCase()); // tap air portugal
+// console.log(airline.toUpperCase()); // TAP AIR PORTUGAL
 
-// const passenger = 'abDAlLah'; // we wanted it like this Abdallah
+// let passenger = 'abDAlLah'; // we want it like this "Abdallah"
 // const passengerLower = passenger.toLowerCase();
 // const passerModified = passenger[0].toUpperCase() + passengerLower.slice(1);
 // console.log(passerModified);
@@ -824,10 +933,10 @@ GOOD LUCK 😀
 // // padStart, padEnd 
 // // is to add for example "+" at the beginning or the end a number of times
 
-// console.log('abdallah'.padStart(25, '+')); // the result will be a 25 length string "+++++++++++++++++abdallah": 18 char = "=" and 7 = "abdallah"
+// console.log('abdallah'.padStart(25, '+')); // the result will be a 25 length string "+++++++++++++++++abdallah": 17 char = "+" and 8 = "abdallah"
 // console.log('abdallah'.padStart(25, '+').padEnd(50, "=")); // +++++++++++++++++abdallah=========================
 
-// // Example of masking phone numbers
+// // Example of masking phone numbers (mask all numbers with * except last 4 numbers)
 // const maskNumbers = (number) =>
 // {
 //   const str = number + '';
@@ -835,7 +944,7 @@ GOOD LUCK 😀
 //   return last4Char.padStart(str.length, "*");
 // }
 // console.log(maskNumbers(276376));
-// console.log(maskNumbers(2762768746376));
+// console.log(maskNumbers(2762768746376)); // *********6376
 // console.log(maskNumbers('276918273781871239376'));
 
 // // repeat
@@ -903,6 +1012,12 @@ document.querySelector('button').addEventListener('click', () =>
     // console.log(secondWordCapital);
     console.log(`${splitted[0]}${secondWordCapital}`);
   }
+
+  // for(const [index, value] of rows.entries())
+  // {
+  //   const splitted = value.toLowerCase().trim().split("_");
+  //   console.log(splitted[0] + splitted[1][0].toUpperCase()+splitted[1].slice(1))
+  // }
 });
 
 // Video solution

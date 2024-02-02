@@ -251,7 +251,7 @@ btnLogin.addEventListener("click", (e) =>
 
     // create current date and time
     // const now = new Date();
-    // const day = `${now.getDate()}`.padStart(2, 0);
+    // const day = `${now.getDate()}`.padStart(2, 0); // get the current day number (25-12-2024 >>> but only 25)
     // const month = `${now.getMonth() + 1}`.padStart(2, 0); // " + 1 " because the month is 0-based
     // const year = now.getFullYear();
     // const hour = `${now.getHours()}`.padStart(2, 0);
@@ -430,7 +430,7 @@ btnSort.addEventListener("click", (e) =>
 // console.log(Math.trunc(-23.5)); // -23 just removes the decimal numer
 
 // // rounding decimals
-// console.log((2.77).toFixed(4)); // 2.7700 the return is tring
+// console.log((2.77).toFixed(4)); // 2.7700 the return is string
 
 
 
@@ -444,7 +444,7 @@ btnSort.addEventListener("click", (e) =>
 // console.log(isEven(99));
 
 // // not practical example
-// // make the numbers divisable by 2 color = red
+// // make (color = orangered) to the numbers divisable by 2 
 // labelBalance.addEventListener("click", () =>
 // {
 //   [...document.querySelectorAll(".movements__row")].forEach((el, i) => 
@@ -534,7 +534,7 @@ btnSort.addEventListener("click", (e) =>
 //   // weekday: 'long'
 // };
 // const locale = navigator.language; // "ar-EG"  // see this website http://www.lingoes.net/en/translator/langcode.htm
-// const x =  new Intl.DateTimeFormat(currentAccount.locale, options).format(now);
+// const x =  new Intl.DateTimeFormat(locale, options).format(now);
 // console.log(locale, x);
 // // simple line
 // console.log(new Intl.DateTimeFormat(navigator.language).format(new Date()));
@@ -592,21 +592,20 @@ btnSort.addEventListener("click", (e) =>
 //   console.log(`We ate ${ing1} and ${ing2}`);
 // }, 3000, 'fruit', 'apple');
 
-// // if we want to stop setTImeOut from execution
+// // // if we want to stop setTImeOut from execution
 // const ingredients = ['olives', 'spinach'];
 // const pizzaTimer = setTimeout((ing3, ing4)=>
 // {
 //   console.log(`We ate ${ing3} and ${ing4}`);
-// }, 5000, ...ingredients);
+// }, 1000, ...ingredients);
 
-// if(ingredients.includes('olives')) clearTimeout(pizzaTimer);
+// if(ingredients.includes('olivesss')) clearTimeout(pizzaTimer);
 
 
 // // setInterval
 // // the function will be executed every 1 second
 // setInterval(()=>
 // {
-//   // console.log('object');
 //   const options = 
 //   {
 //     hour: 'numeric',

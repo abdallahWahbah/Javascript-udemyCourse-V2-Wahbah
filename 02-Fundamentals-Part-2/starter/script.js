@@ -5,7 +5,8 @@
 
 // let hasLicence = false;
 // let go = true;
-// if(go) hasLicencesssssss = true; // it will tell you in the dev tools that it's not defined
+// if(go) newVariable = true; // it will tell you in the dev tools that it's not defined
+// // without strict mode, it will create a new variable (newVariable) and assing true to it
 // console.log(hasLicence);
 
 
@@ -49,7 +50,7 @@
 //                              Big Note
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// we can call function decleration before they are defined in the code
+// we can call function decleration before they are defined in the code(casue they are hoisted)
 
 
 
@@ -61,8 +62,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                              Big Note
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Arrow function has not "this" keyword
-// A special from of function expression that is shorter and faster to write 
+// Arrow function doesn't have "this" keyword
+// A special form of function expression that is shorter and faster to write 
 
 // one param - one line of code
 // let calc3 = birth => 2021-1998;
@@ -275,12 +276,12 @@
 console.log(Math.floor(1.9) + " floor"); // Round a number downward to its nearest integer: 1
 console.log(Math.ceil(1.1) + " ceil");  // Round a number upward to its nearest integer: 2
 console.log(Math.round(1.7) + " round"); // Round a number to the nearest integer: التقريب
-console.log(Math.trunc(2.2) + " trunc"); // Return the integer part of a number: 2 (just like the floor method)
+console.log(Math.trunc(2.2) + " trunc"); // Return the integer part of a number: 2 (just like the floor method)(removes the decimal part)
 
 let dice = Math.trunc(Math.random()* 6) +1; // Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive)
 // in this example (Math.random()* 6) will return number between 0 and 5.99999999 
 // trunc will get the integer part >>> 0 to 5
-// then we add 1 >>> so the range if 0 to 6
+// then we add 1 >>> so the range is 0 to 6
 console.log(dice);
 
 

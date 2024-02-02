@@ -83,7 +83,7 @@ btnHold.addEventListener("click", () =>
         currentScore = 0;
         document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
 
-        if(totalScore >= 10)
+        if(totalScore >= 100)
         {
             playing = false;
             document.querySelector(`.player--${activePlayer}`).classList.remove("player--active");

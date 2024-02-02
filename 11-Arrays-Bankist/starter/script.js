@@ -602,7 +602,7 @@ GOOD LUCK 😀
 
 
 
-////////////////////////////// 14 //////////////////////////////
+////////////////////////////// 15 //////////////////////////////
 // The magic of chaning  method
 
 // get the sum of +ve values with each value multiplied by 1.1
@@ -708,7 +708,7 @@ GOOD LUCK 😀
 
 // // 2 level of nesting
 // let arr2 = [[1, 2, [3, 4]], [5, 6, 7], [8, 9], 10];
-// console.log(arr.flat(2)); // the 2 means that you should go deeper 2 time nesting
+// console.log(arr2.flat(2)); // the 2 means that you should go deeper 2 time nesting
 
 // // example ... we want to sum all the movements of all accounts
 
@@ -733,7 +733,7 @@ GOOD LUCK 😀
 
 
 ////////////////////////////// 23 //////////////////////////////
-// sorting arrays: the ssort method sorts based on strings
+// sorting arrays: the sort method sorts based on strings
 
 // const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
 // console.log(owners.sort()); // sort method mutates the original array
@@ -829,50 +829,50 @@ const dogs = [
 GOOD LUCK 😀
 */
 
-حاول تحل الكود شالنج ده عشان شكله فشيخ لاني فصلت
+// حاول تحل الكود شالنج ده عشان شكله فشيخ لاني فصلت
 
-const dogs = [
-  { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
-  { weight: 8, curFood: 200, owners: ['Matilda'] },
-  { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
-  { weight: 32, curFood: 340, owners: ['Michael'] }
-];
+// const dogs = [
+//   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
+//   { weight: 8, curFood: 200, owners: ['Matilda'] },
+//   { weight: 13, curFood: 275, owners: ['Sarah', 'John'] },
+//   { weight: 32, curFood: 340, owners: ['Michael'] }
+// ];
 
-// 1) 
-dogs.forEach((el, i) => el.recFood = el.weight ** 0.75 * 28);
+// // 1) 
+// dogs.forEach((el, i) => el.recFood = el.weight ** 0.75 * 28);
 
-// 2)
-// Find Sarah's dog and log to the console whether it's eating too much or too little. 
-// HINT: Some dogs have multiple owners, so you first need to find Sarah in the owners array, 
-// and so this one is a bit tricky (on purpose) 🤓
-const saraDog = dogs.find(el => el.owners.includes("Sarah"));
-console.log(saraDog);
-console.log(`Sara's dag is eating too ${saraDog.curFood > saraDog.recFood ? "much": "little"}`); 
+// // 2)
+// // Find Sarah's dog and log to the console whether it's eating too much or too little. 
+// // HINT: Some dogs have multiple owners, so you first need to find Sarah in the owners array, 
+// // and so this one is a bit tricky (on purpose) 🤓
+// const saraDog = dogs.find(el => el.owners.includes("Sarah"));
+// console.log(saraDog);
+// console.log(`Sara's dag is eating too ${saraDog.curFood > saraDog.recFood ? "much": "little"}`); 
 
-// 3)
-let ownersEatTooMuch = dogs.filter(el => el.curFood > el.recFood);
-console.log(ownersEatTooMuch);
-ownersEatTooMuch = ownersEatTooMuch.flatMap(dog => dog.owners);
-console.log(ownersEatTooMuch);
-const ownersEatTooLittle = dogs.filter(dog => dog.curFood < dog.recFood).flatMap(dog => dog.owners);
-console.log(ownersEatTooLittle);
+// // 3)
+// let ownersEatTooMuch = dogs.filter(el => el.curFood > el.recFood);
+// console.log(ownersEatTooMuch);
+// ownersEatTooMuch = ownersEatTooMuch.flatMap(dog => dog.owners);
+// console.log(ownersEatTooMuch);
+// const ownersEatTooLittle = dogs.filter(dog => dog.curFood < dog.recFood).flatMap(dog => dog.owners);
+// console.log(ownersEatTooLittle);
 
-// 4)
-// Log a string to the console for each array created in 3., 
-// like this: "Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
-console.log(`${ownersEatTooMuch.join(" and ")} eat too much`);
-console.log(`${ownersEatTooLittle.join(" and ")} eat too little`);
+// // 4)
+// // Log a string to the console for each array created in 3., 
+// // like this: "Matilda and Alice and Bob's dogs eat too much!" and "Sarah and John and Michael's dogs eat too little!"
+// console.log(`${ownersEatTooMuch.join(" and ")} eat too much`);
+// console.log(`${ownersEatTooLittle.join(" and ")} eat too little`);
 
-// 5)
-// Log to the console whether there is any dog eating EXACTLY the amount of food that is recommended (just true or false)
-console.log(dogs.some(el => el.recFood === el.curFood));
+// // 5)
+// // Log to the console whether there is any dog eating EXACTLY the amount of food that is recommended (just true or false)
+// console.log(dogs.some(el => el.recFood === el.curFood));
 
-// 6)
-// Log to the console whether there is any dog eating an OKAY amount of food (just true or false)
+// // 6)
+// // Log to the console whether there is any dog eating an OKAY amount of food (just true or false)
 
-// 7)
-// Create an array containing the dogs that are eating an OKAY amount of food (try to reuse the condition used in 6.)
+// // 7)
+// // Create an array containing the dogs that are eating an OKAY amount of food (try to reuse the condition used in 6.)
 
-// 8)
-// Create a shallow copy of the dogs array and sort it by recommended food portion in an ascending order 
-//   (keep in mind that the portions are inside the array's objects)
+// // 8)
+// // Create a shallow copy of the dogs array and sort it by recommended food portion in an ascending order 
+// //   (keep in mind that the portions are inside the array's objects)

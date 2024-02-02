@@ -5,7 +5,7 @@
 class Workout
 {
     date = new Date();
-    id = (Date.now() + '').slice(-10);// take the last 10 cnumbers in the date .... remember that the date started counting in ms from 1972(nearly)
+    id = (Date.now() + '').slice(-10);// take the last 10 numbers in the date .... remember that the date started counting in ms from 1972(nearly)
 
     constructor(coords, distance, duration)
     {
